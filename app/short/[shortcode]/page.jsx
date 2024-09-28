@@ -11,7 +11,7 @@ export default function UrlRedirect() {
 
     const redirect = async () => {
         try {
-            const response = await axios.get(`https://spring-boot-shortmeurl-production.up.railway.app:8080:8080/api/v1/get-original/${param.shortcode}`)
+            const response = await axios.get(`https://spring-boot-shortmeurl-production.up.railway.app/api/v1/get-original/${param.shortcode}`)
 
             if (response.status === 200) {
                 router.replace(response.data) 
