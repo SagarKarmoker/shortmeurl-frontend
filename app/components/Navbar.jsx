@@ -4,7 +4,7 @@ import { ArrowDownUp } from 'lucide-react';
 
 export default function Navbar() {
     return (
-        <header className='container mx-auto'>
+        <header className='container mx-auto sticky top-0 border-b-2'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
