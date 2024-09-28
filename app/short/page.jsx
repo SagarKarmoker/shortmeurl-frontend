@@ -20,7 +20,7 @@ export default function ShortUrl() {
         }
 
         try {
-            const response = await axios.post("http://localhost:8080/api/v1/create", {
+            const response = await axios.post("spring-boot-shortmeurl-production.up.railway.app/api/v1/create", {
                 originalUrl: originalUrl
             });
 
