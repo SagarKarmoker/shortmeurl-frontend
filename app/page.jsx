@@ -12,6 +12,9 @@ import {
 } from "@/components/ui/accordion"
 import { LinkIcon, ZapIcon, ChartBarIcon, LockIcon, CheckIcon, StarIcon } from 'lucide-react'
 import Footer from '@/components/Footer'
+import FeatureCard from '@/components/FeatureCard'
+import PricingCard from '@/components/PricingCard'
+import TestimonialCard from '@/components/TestimonialCard'
 
 export default function Home() {
   const [url, setUrl] = useState('')
@@ -184,80 +187,5 @@ export default function Home() {
       </main>
       <Footer />
     </div>)
-  );
-}
-
-function FeatureCard({
-  icon,
-  title,
-  description
-}) {
-  return (
-    (<Card>
-      <CardContent className="p-6">
-        <div
-          className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-50 mb-4">
-          {icon}
-        </div>
-        <h3 className="text-lg font-medium text-gray-900">{title}</h3>
-        <p className="mt-2 text-base text-gray-500">{description}</p>
-      </CardContent>
-    </Card>)
-  );
-}
-
-function PricingCard({
-  title,
-  price,
-  description,
-  features,
-  highlighted = false
-}) {
-  return (
-    (<Card
-      className={`flex flex-col ${highlighted ? 'border-blue-500 border-2' : ''}`}>
-      <CardContent className="p-6 flex-grow">
-        <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
-        <p className="mt-4 text-5xl font-extrabold text-gray-900">{price}</p>
-        <p className="mt-2 text-gray-500">{description}</p>
-        <ul className="mt-6 space-y-4">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-start">
-              <CheckIcon className="flex-shrink-0 h-6 w-6 text-green-500" />
-              <span className="ml-3 text-base text-gray-500">{feature}</span>
-            </li>
-          ))}
-        </ul>
-      </CardContent>
-      <div className="p-6 bg-gray-50 border-t border-gray-100">
-        <Button
-          className={`w-full ${highlighted ? 'bg-blue-500 hover:bg-blue-600' : ''}`}>
-          {highlighted ? 'Start your free trial' : 'Get started'}
-        </Button>
-      </div>
-    </Card>)
-  );
-}
-
-function TestimonialCard({
-  quote,
-  author,
-  company
-}) {
-  return (
-    (<Card>
-      <CardContent className="p-6">
-        <StarIcon className="h-5 w-5 text-yellow-400" />
-        <StarIcon className="h-5 w-5 text-yellow-400" />
-        <StarIcon className="h-5 w-5 text-yellow-400" />
-        <StarIcon className="h-5 w-5 text-yellow-400" />
-        <StarIcon className="h-5 w-5 text-yellow-400" />
-        <p className="mt-4 text-lg text-gray-600">{quote}</p>
-        <div className="mt-6">
-          <p className="text-base font-medium text-gray-900">{author}</p>
-          <p className="text-base text-gray-500">{company}</p>
-        </div>
-      </CardContent>
-    </Card>)
   );
 }
