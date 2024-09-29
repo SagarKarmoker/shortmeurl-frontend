@@ -22,7 +22,15 @@ export default function Navbar() {
                     <a href="#faq" className="text-gray-500 hover:text-gray-900">FAQ</a>
                 </div>
                 {/* <button className='btn btn-outline'>Sign Up</button> */}
-                <Button>Sign Up</Button>
+                <div className='flex justify-center gap-4'>
+                    <Button>Sign Up</Button>
+                    <Button>
+                        <Link href="/short" className='flex'>
+                            Short URL <ArrowDownUp className='w-5 h-5 animate-pulse ml-2' />
+                        </Link>
+                    </Button>
+                </div>
+
             </nav>
         </header>
     )

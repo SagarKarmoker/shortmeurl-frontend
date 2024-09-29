@@ -3,14 +3,13 @@
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Card, CardContent } from "@/components/ui/card"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { LinkIcon, ZapIcon, ChartBarIcon, LockIcon, CheckIcon, StarIcon } from 'lucide-react'
+import { ZapIcon, ChartBarIcon, LockIcon } from 'lucide-react'
 import Footer from '@/components/Footer'
 import FeatureCard from '@/components/FeatureCard'
 import PricingCard from '@/components/PricingCard'
